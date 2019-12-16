@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+<script src="https://cdn.rawgit.com/zloirock/core-js/master/client/shim.min.js"></script>
+<script src="https://wzrd.in/standalone/tape@latest"></script>
+  <script src="https://wzrd.in/standalone/tap-browser-color@latest"></script>
+<script src="//fb.me/react-with-addons-0.14.3.js"></script>
+<script src="//fb.me/react-dom-0.14.3.js"></script>
+
+
+  </head>
+  <body>
+  <h1> Question #2: Using a closure within a loop</h1>
+<p>In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.</p>
+
+<h1>Be prepared for a quick follow-up: “Can you name two common uses for closures?”</h1>
+
+<p>To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function.
+The inner function will have access to the variables in the outer function scope, even after the outer function has returned.</p>
+
+<p>Among other things, closures are commonly used to give objects data privacy. Data privacy is an essential property that helps us program to an interface, not an implementation. This is an important concept that helps us build more robust software because implementation details are more likely to change in breaking ways than interface contracts.</p>
+
+<p>A JavaScript closure is when an inner function has access to its outer enclosing function's variables and properties. In the code above, the following line of code:</p>
+
+<p>uses a variable i which is declared outside of itself. The variable i is actually declared within the for loop and the inner function accesses it. So when the for loop is done running, each of the inner functions refers to the same variable i, which at the end of the loop is equal to 3. Our goal is for each inner function to maintain its reference to the variable i without the value of it being altered. We'll solve this using an IIFE, or an immediately-invoked function expression.<p>
+
+  <script>
+for (var i = 0; i < 3; i++) {
+  setTimeout(function(i_local) { 
+    return function() { alert(i_local); } 
+  }(i), 1000 + i);
+}
+  </script>
+
+
+
+  </body>
+</html>
+

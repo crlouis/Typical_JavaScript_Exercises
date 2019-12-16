@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>PerformanceJS | The Best Frontend JavaScript Interview Questions (written by a Frontend Engineer)</title>
+  <base href="https://performancejs.com:443/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="language" content="en">
+  <link rel="icon" href="images/favicon.png?v=8a06b69">
+  <link rel="stylesheet" href="/bundle.css?v=f46276d" type="text/css" media="screen">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga')
+    ga('create', 'UA-100721445-1', 'auto')
+    ga('send', 'pageview')
+  </script>
+</head>
+<body>
+  <div><div class="LeftPane " tabindex="3"><div class="Box"><h1>Performance<sub>JS</sub></h1><h2>a blog by Boris Cherny</h2></div><ul><li><a href="/" class="">Blog</a><ul><li><a class="" href="posts/CSS">CSS<span class="Topic-Count">1</span></a></li><li><a class="" href="posts/Clojure">Clojure<span class="Topic-Count">1</span></a></li><li><a class="" href="posts/Functional Programming">Functional Programming<span class="Topic-Count">3</span></a></li><li><a class="" href="posts/Haskell">Haskell<span class="Topic-Count">3</span></a></li><li><a class="Topic-Current" href="posts/JavaScript">JavaScript<span class="Topic-Count">7</span></a></li><li><a class="" href="posts/React">React<span class="Topic-Count">2</span></a></li><li><a class="" href="posts/Ruby">Ruby<span class="Topic-Count">1</span></a></li><li><a class="" href="posts/SASS">SASS<span class="Topic-Count">1</span></a></li><li><a class="" href="posts/Scala">Scala<span class="Topic-Count">2</span></a></li><li><a class="" href="posts/TypeScript">TypeScript<span class="Topic-Count">3</span></a></li><li><a class="" href="posts/Writing">Writing<span class="Topic-Count">1</span></a></li></ul></li><li><a href="/about" class="">About</a></li><li><a href="mailto:boris@performancejs.com">Contact</a></li><li><a href="//github.com/bcherny" target="_blank">Github</a></li><li><a href="//eepurl.com/cUtCF5" target="_blank">Subscribe</a></li></ul></div><div class="Article"><div class="Article-Body"><h1><a href="/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-(written-by-a-Frontend-Engineer)">The Best Frontend JavaScript Interview Questions (written by a Frontend Engineer)</a></h1><div><p>I was at a <a href="https://www.freecodecamp.com/">Free Code Camp</a> <a href="https://www.meetup.com/Free-Code-Camp-SF/">meetup</a> in San Francisco a few days ago (for those not familiar, Free Code Camp is a group of people who get together to learn JavaScript and web development), and someone getting ready for frontend dev job interviews asked for JavaScript questions to practice. After a bit of Googling, I couldn’t find any lists I could point her to and say “if you can do these, you can land a job”. <a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions">Some</a> <a href="https://github.com/khan4019/front-end-Interview-Questions">came</a> <a href="https://github.com/kennymkchan/interview-questions-in-javascript">pretty</a> <a href="https://medium.freecodecamp.com/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb">close</a>, <a href="https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95">some</a> <a href="https://www.toptal.com/javascript/interview-questions">were</a> <a href="https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z">silly</a>, but all were either incomplete or asked questions that people don’t actually ask in real life.</p>
+<p>So, based on my experiences on both sides of the interview table, here goes. These are a sampling of questions I’ve asked and been asked when hiring frontend engineers. Keep in mind that some places (like Google) focus more on designing efficient algorithms, so if you want to work there you should practice <a href="https://code.google.com/codejam/past-contests">past CodeJam problems</a> in addition to the stuff below. If you have a question that belongs in one of these lists (or I’ve made a mistake somewhere), <a href="mailto:boris@performancejs.com">shoot me an email</a>.</p>
+<p>I’ll be adding/updating answers to these questions <a href="https://github.com/bcherny/frontend-interview-questions">here</a> (feel free to make PRs with additions/improvements!).</p>
+<p>I’ve grouped questions into a few sections: <strong>Concepts</strong>, <strong>Coding</strong>, <strong>Debugging</strong>, and <strong>System Design</strong>:</p>
+<h2>Concepts</h2>
+<p>Be able to clearly explain these in words (no coding):</p>
+<ol>
+<li>What is Big O notation, and why is it useful? <br><b>Big O notation is used in Computer Science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.</b></li>
+<li>What is the DOM? <br><b> The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page<br>
+
+A Web page is a document. This document can be either displayed in the browser window or as the HTML source. But it is the same document in both cases. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.</b></li>
+<li>What is the event loop?<br><b>Put stuff out of Event Que and Places it onto the Function Execution Stack when it becomes empty 
+Simply it Takes Call(s) and Function(s)
+Place them in the Stack but to wait for it's set time
+->Then into the Web APIs of the Browser
+->Then into the Event Que
+->Then back into the Stack for Execution
+https://www.youtube.com/watch?v=XzXIMZMN9k4</b></li>
+<li>What is a closure?<br><b>A JavaScript closure is when an inner function has access to its outer enclosing function's variables and properties. In the code above, the following line of code:</b></li>
+<li>How does prototypal inheritance work, and how is it different from classical inheritance? (this is not a useful question IMO, but a lot of people like to ask it)<br><b>“A prototype is a working object instance. Objects inherit directly from other objects.”</b></li>
+<li>How does <code>this</code> work?<br><b>The this keyword behaves differently in JavaScript compared to other languages. In JavaScript the value of this not refer to the function in which it is used or it’s scope but is determined mostly by the invocation context of function (context.function()) and where it is called.</b></li>
+<li>What is event bubbling and how does it work? (this is also a bad question IMO, but a lot of people like to ask it too)<br><b>Event bubbling is a term you might have come across on your JavaScript travels. It relates to the order in which event handlers are called when one element is nested inside a second element, and both elements have registered a listener for the same event (a click, for example).</b></li>
+<li>Describe a few ways to communicate between a server and a client. Describe how a few network protocols work at a high level (IP, TCP, HTTP/S/2, UDP, RTC, DNS, etc.)</li>
+<li>What is REST, and why do people use it?<br><b>To give a simple definition, REST is any interface between systems using HTTP to obtain data and generate operations on those data in all possible formats, such as XML and JSON. This is an increasingly popular alternative to other standard data exchange protocols such as SOAP (Simple Object Access Protocol), which have a high capacity but are also very complex. Sometimes it's preferable to use a simpler data-processing solution such as REST. </b></li>
+<li>My website is slow. Walk me through diagnosing and fixing it. What are some performance optimizations people use, and when should they be used?<ul>
+<li>https://help.dreamhost.com/hc/en-us/articles/216349808-Common-reasons-for-poor-website-performance</li>
+<li><b>Optimizing your CSS and JavaScript</b></li>
+<li>Use a CDN to load jQuery Cloudflare </li>
+<li>Optimize JavaScript delivery</li>
+<li>Optimize CSS delivery</li>
+<li>Check for poorly written scripts</li>
+<li>Minify your scripts</li>
+<li><b>Optimizing Media</b></li>
+<li>Images</li>
+<li>Video</li>
+<li>PHP</li>
+<li>Caching</li>
+<li>Use a CDN to deliver static files</li>
+<li>Databases</li>
+<li>Internet issues</li>
+<li>Traceroute</li>
+<li>ISP</li>
+<li>Network tools</li>
+<li>Web server</li>
+<li>Browser plugin</li>
+</ul></li>
+<li>What frameworks have you used? What are the pros and cons of each? Why do people use frameworks? What kinds of problems do frameworks solve?</li>
+</ol>
+<h2>Coding</h2>
+<p>Implement the following functions (tests follow each question):</p>
+<h3>Easy</h3>
+<ol>
+<li>
+<p><code>isPrime</code> - Returns <code>true</code> or <code>false</code>, indicating whether the given number is prime.</p>
+<pre><code class="language-js">isPrime(<span class="hljs-number">0</span>)                          <span class="hljs-comment">// false</span>
+isPrime(<span class="hljs-number">1</span>)                          <span class="hljs-comment">// false</span>
+isPrime(<span class="hljs-number">17</span>)                         <span class="hljs-comment">// true</span>
+isPrime(<span class="hljs-number">10000000000000</span>)             <span class="hljs-comment">// false</span>
+</code></pre>
+</li>
+<li>
+<p><code>factorial</code> - Returns a number that is the factorial of the given number.</p>
+<pre><code class="language-js">factorial(<span class="hljs-number">0</span>)                        <span class="hljs-comment">// 1</span>
+factorial(<span class="hljs-number">1</span>)                        <span class="hljs-comment">// 1</span>
+factorial(<span class="hljs-number">6</span>)                        <span class="hljs-comment">// 720</span>
+</code></pre>
+</li>
+<li>
+<p><code>fib</code> - Returns the nth <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci number</a>.</p>
+<pre><code class="language-js">fib(<span class="hljs-number">0</span>)                              <span class="hljs-comment">// 0</span>
+fib(<span class="hljs-number">1</span>)                              <span class="hljs-comment">// 1</span>
+fib(<span class="hljs-number">10</span>)                             <span class="hljs-comment">// 55</span>
+fib(<span class="hljs-number">20</span>)                             <span class="hljs-comment">// 6765</span>
+</code></pre>
+</li>
+<li>
+<p><code>isSorted</code> - Returns <code>true</code> or <code>false</code>, indicating whether the given array of numbers is sorted.</p>
+<pre><code class="language-js">isSorted([])                        <span class="hljs-comment">// true</span>
+isSorted([-<span class="hljs-literal">Infinity</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>])  <span class="hljs-comment">// true</span>
+isSorted([<span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">-3</span>, <span class="hljs-number">10</span>])            <span class="hljs-comment">// false</span>
+</code></pre>
+</li>
+<li>
+<p><code>filter</code> - Implement the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Filter"><code>filter</code></a> function.</p>
+<pre><code class="language-js">filter([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], n =&gt; n &lt; <span class="hljs-number">3</span>)    <span class="hljs-comment">// [1, 2]</span>
+</code></pre>
+</li>
+<li>
+<p><code>reduce</code> - Implement the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"><code>reduce</code></a> function.</p>
+<pre><code class="language-js">reduce([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], (a, b) =&gt; a + b, <span class="hljs-number">0</span>) <span class="hljs-comment">// 10</span>
+</code></pre>
+</li>
+<li>
+<p><code>reverse</code> - Reverses the given string (yes, using the built in <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"><code>reverse</code></a> function is cheating).</p>
+<pre><code class="language-js">reverse(<span class="hljs-string">''</span>)                         <span class="hljs-comment">// ''</span>
+reverse(<span class="hljs-string">'abcdef'</span>)                   <span class="hljs-comment">// 'fedcba'</span>
+</code></pre>
+</li>
+<li>
+<p><code>indexOf</code> - Implement the <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a> function for arrays.</p>
+<pre><code class="language-js">indexOf([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">1</span>)               <span class="hljs-comment">// 0</span>
+indexOf([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-number">4</span>)               <span class="hljs-comment">// -1</span>
+</code></pre>
+</li>
+<li>
+<p><code>isPalindrome</code> - Return <code>true</code> or <code>false</code> indicating whether the given string is a plaindrone (case and space insensitive).</p>
+<pre><code class="language-js">isPalindrome(<span class="hljs-string">''</span>)                                <span class="hljs-comment">// true</span>
+isPalindrome(<span class="hljs-string">'abcdcba'</span>)                         <span class="hljs-comment">// true</span>
+isPalindrome(<span class="hljs-string">'abcd'</span>)                            <span class="hljs-comment">// false</span>
+isPalindrome(<span class="hljs-string">'A man a plan a canal Panama'</span>)     <span class="hljs-comment">// true</span>
+</code></pre>
+</li>
+<li>
+<p><code>missing</code> - Takes an unsorted array of unique numbers (ie. no repeats) from 1 through some number <em>n</em>, and returns the missing number in the sequence (there are either no missing numbers, or exactly one missing number). Can you do it in <em>O(N)</em> time? Hint: There’s a clever formula you can use.</p>
+<pre><code class="language-js">missing([])                         <span class="hljs-comment">// undefined</span>
+missing([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>])                  <span class="hljs-comment">// 2</span>
+missing([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])                  <span class="hljs-comment">// 1</span>
+missing([<span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>])               <span class="hljs-comment">// 3</span>
+missing([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])               <span class="hljs-comment">// undefined</span>
+</code></pre>
+</li>
+<li>
+<p><code>isBalanced</code> - Takes a string and returns <code>true</code> or <code>false</code> indicating whether its curly braces are balanced.</p>
+<pre><code class="language-js">isBalanced(<span class="hljs-string">'}{'</span>)                      <span class="hljs-comment">// false</span>
+isBalanced(<span class="hljs-string">'{{}'</span>)                     <span class="hljs-comment">// false</span>
+isBalanced(<span class="hljs-string">'{}{}'</span>)                    <span class="hljs-comment">// true</span>
+isBalanced(<span class="hljs-string">'foo { bar { baz } boo }'</span>) <span class="hljs-comment">// true</span>
+isBalanced(<span class="hljs-string">'foo { bar { baz }'</span>)       <span class="hljs-comment">// false</span>
+isBalanced(<span class="hljs-string">'foo { bar } }'</span>)           <span class="hljs-comment">// false</span>
+</code></pre>
+</li>
+</ol>
+<h3>Intermediate</h3>
+<ol>
+<li>
+<p><code>fib2</code> - Like the <code>fib</code> function you implemented above, able to handle numbers up to <code>50</code> (hint: look up memoization).</p>
+<pre><code class="language-js">fib2(<span class="hljs-number">0</span>)                               <span class="hljs-comment">// 0</span>
+fib2(<span class="hljs-number">1</span>)                               <span class="hljs-comment">// 1</span>
+fib2(<span class="hljs-number">10</span>)                              <span class="hljs-comment">// 55</span>
+fib2(<span class="hljs-number">50</span>)                              <span class="hljs-comment">// 12586269025</span>
+</code></pre>
+</li>
+<li>
+<p><code>isBalanced2</code> - Like the <code>isBalanced</code> function you implemented above, but supports 3 types of braces: curly <code>{}</code>, square <code>[]</code>, and round <code>()</code>. A string with interleaving braces should return false.</p>
+<pre><code class="language-js">isBalanced2(<span class="hljs-string">'(foo { bar (baz) [boo] })'</span>) <span class="hljs-comment">// true</span>
+isBalanced2(<span class="hljs-string">'foo { bar { baz }'</span>)         <span class="hljs-comment">// false</span>
+isBalanced2(<span class="hljs-string">'foo { (bar [baz] } )'</span>)      <span class="hljs-comment">// false</span>
+</code></pre>
+</li>
+<li>
+<p><code>uniq</code> - Takes an array of numbers, and returns the unique numbers. Can you do it in <em>O(N)</em> time?</p>
+<pre><code class="language-js">uniq([])                              <span class="hljs-comment">// []</span>
+uniq([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>])           <span class="hljs-comment">// [1, 4, 2, 3, 8]</span>
+</code></pre>
+</li>
+<li>
+<p><code>intersection</code> - Find the intersection of two arrays. Can you do it in <em>O(M+N)</em> time (where <em>M</em> and <em>N</em> are the lengths of the two arrays)?</p>
+<pre><code class="language-js">intersection([<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">8</span>, <span class="hljs-number">91</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>])    <span class="hljs-comment">// [4, 1]</span>
+intersection([<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">7</span>, <span class="hljs-number">12</span>])             <span class="hljs-comment">// []</span>
+</code></pre>
+</li>
+<li>
+<p><code>sort</code> - Implement the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort</a> function to sort an array of numbers in <em>O(N×log(N))</em> time.</p>
+<pre><code class="language-js">sort([])                              <span class="hljs-comment">// []</span>
+sort([<span class="hljs-number">-4</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">Infinity</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>])      <span class="hljs-comment">// [-4, 0, 1, 3, 3, Infinity]</span>
+</code></pre>
+</li>
+<li>
+<p><code>includes</code> - Return <code>true</code> or <code>false</code> indicating whether the given number appears in the given <em>sorted</em> array. Can you do it in <em>O(log(N))</em> time?</p>
+<pre><code class="language-js">includes([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>], <span class="hljs-number">8</span>)            <span class="hljs-comment">// true</span>
+includes([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">15</span>], <span class="hljs-number">15</span>)        <span class="hljs-comment">// true</span>
+includes([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>], <span class="hljs-number">9</span>)        <span class="hljs-comment">// false</span>
+</code></pre>
+</li>
+<li>
+<p><code>assignDeep</code> - Like <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign</code></a>, but merges objects deeply. For the sake of simplicity, you can assume that objects can contain only numbers and other objects (and not arrays, functions, etc.).</p>
+<pre><code class="language-js">assignDeep({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, {})              <span class="hljs-comment">// { a: 1 }</span>
+assignDeep({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, { <span class="hljs-attr">a</span>: <span class="hljs-number">2</span> })        <span class="hljs-comment">// { a: 2 }</span>
+assignDeep({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> } }) <span class="hljs-comment">// { a: { b: 2 } }</span>
+assignDeep({ <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">1</span> }}}, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">2</span> }}, <span class="hljs-attr">e</span>: <span class="hljs-number">3</span> })
+<span class="hljs-comment">// { a: { b: { c: 1, d: 2 }}, e: 3 }</span>
+</code></pre>
+</li>
+<li>
+<p><code>reduceAsync</code> - Like the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"><code>reduce</code></a> you implemented in the Easy section, but each item must be resolved before continuing onto the next.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> a = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">'a'</span>)
+<span class="hljs-keyword">let</span> b = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">'b'</span>)
+<span class="hljs-keyword">let</span> c = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> resolve(<span class="hljs-string">'c'</span>), <span class="hljs-number">100</span>))
+<span class="hljs-keyword">await</span> reduceAsync([a, b, c], (acc, value) =&gt; [...acc, value], [])
+<span class="hljs-comment">// ['a', 'b', 'c']</span>
+<span class="hljs-keyword">await</span> reduceAsync([a, c, b], (acc, value) =&gt; [...acc, value], [<span class="hljs-string">'d'</span>])
+<span class="hljs-comment">// ['d', 'a', 'c', 'b']</span>
+</code></pre>
+</li>
+<li>
+<p>Implement <code>seq</code> in terms of <code>reduceAsync</code>. <code>seq</code> takes an array of functions that return promises, and resolves them one after the other.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> a = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">'a'</span>)
+<span class="hljs-keyword">let</span> b = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">'b'</span>)
+<span class="hljs-keyword">let</span> c = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">'c'</span>)
+<span class="hljs-keyword">await</span> seq([a, b, c])                  <span class="hljs-comment">// ['a', 'b', 'c']</span>
+<span class="hljs-keyword">await</span> seq([a, c, b])                  <span class="hljs-comment">// ['a', 'c', 'b']</span>
+</code></pre>
+</li>
+</ol>
+<h3>Harder</h3>
+<p><em>Note: For the data structures you’ll implement below, the idea isn’t to memorize them, but just to be able to look at the given API, Google how they work, and implement them, and to have a high level idea of what they are used for and what their tradeoffs are compared to other data structures.</em></p>
+<ol>
+<li>
+<p><code>permute</code> - Return an array of strings, containing every permutation of the given string.</p>
+<pre><code class="language-js">permute(<span class="hljs-string">''</span>)             <span class="hljs-comment">// []</span>
+permute(<span class="hljs-string">'abc'</span>)          <span class="hljs-comment">// ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']</span>
+</code></pre>
+</li>
+<li>
+<p><code>debounce</code> - Implement the <a href="https://lodash.com/docs/4.17.4#debounce">debounce</a> function.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> a = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'foo'</span>)
+<span class="hljs-keyword">let</span> b = debounce(a, <span class="hljs-number">100</span>)
+b()
+b()
+b() <span class="hljs-comment">// only this call should invoke a()</span>
+</code></pre>
+</li>
+<li>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Linked_list"><code>LinkedList</code></a> class without using JavaScript’s built-in arrays (<code>[]</code>). Your LinkedList should support just 2 methods: <code>add</code> and <code>has</code>:</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LinkedList</span> </span>{...}
+<span class="hljs-keyword">let</span> list = <span class="hljs-keyword">new</span> LinkedList(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+list.add(<span class="hljs-number">4</span>)                           <span class="hljs-comment">// undefined</span>
+list.add(<span class="hljs-number">5</span>)                           <span class="hljs-comment">// undefined</span>
+list.has(<span class="hljs-number">1</span>)                           <span class="hljs-comment">// true</span>
+list.has(<span class="hljs-number">4</span>)                           <span class="hljs-comment">// true</span>
+list.has(<span class="hljs-number">6</span>)                           <span class="hljs-comment">// false</span>
+</code></pre>
+</li>
+<li>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Hash_table"><code>HashMap</code></a> class without using JavaScript’s built-in objects (<code>{}</code>) or <code>Map</code>s. You are provided a <code>hash()</code> function that takes a string and returns a number (the numbers are mostly unique, <em>but sometimes two different strings will return the same number</em>):</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hash</span> (<span class="hljs-params">string</span>) </span>{
+  <span class="hljs-keyword">return</span> string
+    .split(<span class="hljs-string">''</span>)
+    .reduce(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> ((a &lt;&lt; <span class="hljs-number">5</span>) + a) + b.charCodeAt(<span class="hljs-number">0</span>), <span class="hljs-number">5381</span>)
+}
+</code></pre>
+<p>Your HashMap should support just 2 methods, <code>get</code>, <code>set</code>:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> map = <span class="hljs-keyword">new</span> HashMap
+map.set(<span class="hljs-string">'abc'</span>, <span class="hljs-number">123</span>)                   <span class="hljs-comment">// undefined</span>
+map.set(<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>)                 <span class="hljs-comment">// undefined</span>
+map.set(<span class="hljs-string">'foo'</span>, <span class="hljs-string">'baz'</span>)                 <span class="hljs-comment">// undefined</span>
+map.get(<span class="hljs-string">'abc'</span>)                        <span class="hljs-comment">// 123</span>
+map.get(<span class="hljs-string">'foo'</span>)                        <span class="hljs-comment">// 'baz'</span>
+map.get(<span class="hljs-string">'def'</span>)                        <span class="hljs-comment">// undefined</span>
+</code></pre>
+</li>
+<li>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Binary_search_tree"><code>BinarySearchTree</code></a> class. It should support 4 methods: <code>add</code>, <code>has</code>, <code>remove</code>, and <code>size</code>:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> tree = <span class="hljs-keyword">new</span> BinarySearchTree
+tree.add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+tree.add(<span class="hljs-number">5</span>)
+tree.has(<span class="hljs-number">2</span>)                           <span class="hljs-comment">// true</span>
+tree.has(<span class="hljs-number">5</span>)                           <span class="hljs-comment">// true</span>
+tree.remove(<span class="hljs-number">3</span>)                        <span class="hljs-comment">// undefined</span>
+tree.size()                           <span class="hljs-comment">// 4</span>
+</code></pre>
+</li>
+<li>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Binary_tree"><code>BinaryTree</code></a> class with breadth first search and inorder, preorder, and postorder depth first search functions.</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> tree = <span class="hljs-keyword">new</span> BinaryTree
+<span class="hljs-keyword">let</span> fn = <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(value)
+tree.add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+tree.bfs(fn)                          <span class="hljs-comment">// undefined</span>
+tree.inorder(fn)                      <span class="hljs-comment">// undefined</span>
+tree.preorder(fn)                     <span class="hljs-comment">// undefined</span>
+tree.postorder(fn)                    <span class="hljs-comment">// undefined</span>
+</code></pre>
+</li>
+</ol>
+<h2>Debugging</h2>
+<p>For each of the following questions, start by understanding and explaining why the given piece of code doesn’t work. Then propose a couple of fixes, and rewrite the code to implement one of the fixes you proposed so the program works correctly:</p>
+<ol>
+<li>
+<p>I want this code to log out <code>&quot;hey amy&quot;</code>, but it logs out <code>&quot;hey arnold&quot;</code> - why?</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span>(<span class="hljs-params">person</span>) </span>{
+  <span class="hljs-keyword">if</span> (person == { <span class="hljs-attr">name</span>: <span class="hljs-string">'amy'</span> }) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'hey amy'</span>
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'hey arnold'</span>
+  }
+}
+greet({ <span class="hljs-attr">name</span>: <span class="hljs-string">'amy'</span> })
+</code></pre>
+</li>
+<li>
+<p>I want this code to log out the numbers <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code> in that order, but it doesn’t do what I expect (this is a bug you run into once in a while, and some people love to ask about it in interviews).</p>
+<pre><code class="language-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) {
+  setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(i), <span class="hljs-number">0</span>)
+}
+</code></pre>
+</li>
+<li>
+<p>I want this code to log out <code>&quot;doggo&quot;</code>, but it logs out <code>undefined</code>!</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> dog = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'doggo'</span>,
+  sayName() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name)
+  }
+}
+<span class="hljs-keyword">let</span> sayName = dog.sayName
+sayName()
+</code></pre>
+</li>
+<li>
+<p>I want my dog to <code>bark()</code>, but instead I get an error. Why?</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Dog</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">this</span>.name = name
+}
+Dog.bark = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name + <span class="hljs-string">' says woof'</span>)
+}
+<span class="hljs-keyword">let</span> fido = <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">'fido'</span>)
+fido.bark()
+</code></pre>
+</li>
+<li>
+<p>Why does this code return the results that it does?</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isBig</span>(<span class="hljs-params">thing</span>) </span>{
+  <span class="hljs-keyword">if</span> (thing == <span class="hljs-number">0</span> || thing == <span class="hljs-number">1</span> || thing == <span class="hljs-number">2</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+isBig(<span class="hljs-number">1</span>)    <span class="hljs-comment">// false</span>
+isBig([<span class="hljs-number">2</span>])  <span class="hljs-comment">// false</span>
+isBig([<span class="hljs-number">3</span>])  <span class="hljs-comment">// true</span>
+</code></pre>
+</li>
+</ol>
+<h2>System design</h2>
+<p>If you’re not sure what “system design” means, <a href="https://github.com/donnemartin/system-design-primer">start here</a>.</p>
+<ol>
+<li>
+<p>Talk me through a full stack implemention of an autocomplete widget. A user can type text into it, and get back results from a server.</p>
+<ul>
+<li>How would you design a frontend to support the following features:
+<ul>
+<li>Fetch data from a backend API</li>
+<li>Render results as a tree (items can have parents/children - it’s not just a flat list)</li>
+<li>Support for checkbox, radio button, icon, and regular list items - items come in many forms</li>
+</ul>
+</li>
+<li>What does the component’s API look like?</li>
+<li>What does the backend API look like?</li>
+<li>What perf considerations are there for complete-as-you-type behavior? Are there any edge cases (for example, if the user types fast and the network is slow)?</li>
+<li>How would you design the network stack and backend in support of fast performance: how do your client/server communicate? How is your data stored on the backend? How do these approaches scale to lots of data and lots of clients?</li>
+</ul>
+</li>
+<li>
+<p>Talk me through a full stack Twitter implementation (shamelessly stolen from my friend <a href="https://github.com/blaisebaileyfinnegan">Michael Vu</a>).</p>
+<ul>
+<li>How do you fetch and render tweets?</li>
+<li>How do you update tweets as new ones come in? How do you know when new ones came in?</li>
+<li>How do you search tweets? How do you search by author? Talk me through your database, backend, and API designs.</li>
+</ul>
+</li>
+</ol>
+<h2>Further resources</h2>
+<p>If you got this far and want more, below are some high quality resources that I’ve found helpful.</p>
+<p>For more things to implement:</p>
+<ul>
+<li><a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693">The Algorithm Design Manual</a></li>
+<li><a href="https://code.google.com/codejam/past-contests">Past CodeJam problems</a></li>
+<li><a href="https://github.com/keon/algorithms">keon/algorithms</a></li>
+</ul>
+<p>For some good reading:</p>
+<ul>
+<li><a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693">The Algorithm Design Manual</a></li>
+<li><a href="https://leanpub.com/javascriptallongesix/read">JavaScript Allonge</a></li>
+<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don’t Know JS</a></li>
+<li><a href="https://smile.amazon.com/Effective-JavaScript-Specific-Software-Development/dp/0321812182">Effective JavaScript</a></li>
+</ul>
+</div></div><div class="Article-Meta"><a class="GithubLink" href="https://github.com/bcherny/frontend-interview-questions" target="_blank"><span class="GithubLink-Link">View repo on GitHub ➜</span><span class="GithubLink-Title">frontend-interview-questions</span></a><span class="Article-Meta-Topics">Posted...<ul><li>By Boris Cherny</li><li title="June 9th, 2017">2 years ago</li><li>In <a class="Pill Pill-Grey" href="posts/JavaScript">JavaScript</a><a class="Pill Pill-Grey" href="posts/Functional Programming">Functional Programming</a></li></ul></span><span class="Article-Meta-Signup"><a class="Pill Pill-Grey" href="//eepurl.com/cUtCF5" target="_blank">Subscribe</a></span></div></div></div>
+</body>
+</html>

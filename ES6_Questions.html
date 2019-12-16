@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ES6 Interview Questions - Full Stack Tutorials</title>
+<meta charset="utf-8" />
+<link rel="dns-prefetch" href="https://www.fullstacktutorials.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="ES6 Interview Questions: ES6 is also known as ECMAScript 2015." />
+<meta name="google-site-verification" content="4ukP4bnk1qmCzYIW7uLmLAaZqjA3E2z7t3oUWLgZvl8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="author" content="FullStackTutorials" />
+<meta property="og:title" content="ES6 Interview Questions - Full Stack Tutorials" />
+<meta property="og:description" content="ES6 Interview Questions: ES6 is also known as ECMAScript 2015." />
+<meta property="og:site_name" content="fullstacktutorials.com" />
+<meta property="fb:app_id" content="127879854559625" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.fullstacktutorials.com/assets/images/interviews/javascript-es6-interview-questions.jpg" />
+<meta property="og:url" content="https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html" />
+<link rel="canonical" href="https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html" />   
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@fullstacktuts" />
+<meta name="twitter:image" content="https://www.fullstacktutorials.com/assets/images/interviews/javascript-es6-interview-questions.jpg" />
+<meta name="twitter:title" content="ES6 Interview Questions - Full Stack Tutorials" />
+<meta name="twitter:description" content="ES6 Interview Questions: ES6 is also known as ECMAScript 2015." />
+<meta name="twitter:url" content="https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html" />   
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png?v=2" />
+<script type="text/javascript" src="/assets/js/jquery.min.js?v=2"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/scripts.css?v=2">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=2">
+<link rel="stylesheet" type="text/css" href="/assets/css/custom.css?v=2">
+<script async src="https://www.google.com/recaptcha/api.js"></script>
+<meta name="csrf-token" content="Rb1V6nA9fnfuwBALnkQUGT6wUiJnbfvaQ1ZUnpdi">
+<script>
+    window.Laravel = {"csrfToken":"Rb1V6nA9fnfuwBALnkQUGT6wUiJnbfvaQ1ZUnpdi"}</script>
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-97856584-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97856584-1');
+</script>
+<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3810316803605653",
+        enable_page_level_ads: true
+    });
+</script>    </head>
+
+<body>
+    <div class="se-pre-con"></div>
+<header>
+    <div class="mobile-menu-area navbar-fixed-top hidden-sm hidden-md hidden-lg">
+        <nav class="mobile-menu" id="mobile-menu">
+    <div class="sidebar-nav">
+        <ul class="nav side-menu">
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form" style="width: 80%;">
+    <form method="get" action="https://www.google.com/search" target="_blank">
+        <input type="hidden" name="sitesearch" value="www.fullstacktutorials.com">
+        <input type="search" class="form-control" placeholder="Search..." name="q" autocomplete="off">
+        <span class="input-group-btn" style="float:right;margin-top: -34px;">
+            <button class="btn mobile-menu-btn" type="submit">
+                <i class="fa fa-search">
+                </i>
+            </button>
+        </span>
+    </form>
+</div>
+            </li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/blog.html">Articles</a>
+            </li>
+            <li>
+                <a href="/tutorials.html">Tutorials</a>
+            </li>
+            <li>
+                <a href="/interviews.html">Interviews</a>
+            </li>
+            <li>
+                <a href="/training.html">Training</a>
+            </li>
+            <li>
+                <a href="/downloads.html">Downloads</a>
+            </li>
+            <li>
+                <a href="/quiz.html">Quiz</a>
+            </li>
+            <li>
+                <a href="https://www.govtvacancy.in" target="_blank">Govt. Jobs</a>
+            </li>
+            <li>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/fullstacktutorials" class="facebook"><i class="fa  fa-facebook">
+                                </i> </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/fullstacktuts" class="twitter"><i class="fa  fa-twitter">
+                                </i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/fullstacktutorials" class="linkedin"><i class="fa  fa-linkedin">
+                                </i></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>        <div class="container">
+            <div class="top_header_icon">
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://www.facebook.com/fullstacktutorials" title="Facebook"><i class="fa fa-facebook">
+            </i></a>
+    </span>
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://twitter.com/fullstacktuts" title="Twitter"><i class="fa fa-twitter">
+            </i></a>
+    </span>
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://www.linkedin.com/company/fullstacktutorials" title="LinkedIn"><i class="fa fa-linkedin">
+            </i></a>
+    </span>
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://www.youtube.com/channel/UCcvYO7gu-NpA5i6-UZPc_eA" title="YouTube"><i class="fa fa-youtube">
+            </i></a>
+    </span>
+</div>            <div id="showLeft" class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="top_header hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-3">
+                    <div class="top_header_menu_wrap">
+    <ul class="top-header-menu">
+                          <li>
+            <a href="/contact.html">Ask Questions <i class="fa fa-question-circle"></i></a>
+        </li>
+    </ul>
+</div>                </div>
+                <div class="col-sm-8 col-md-7">
+    <div class="newsticker-inner">
+        <ul class="newsticker" style="height: 24px; overflow: hidden;">
+            <li style="margin-top: 0px;">
+                <span class="color-2">PHP</span>
+                <a href="/interviews/core-php-interview-questions-and-answers-36.html">PHP Interview Questions & Answers</a>
+            </li>
+            <li style="margin-top: 0px;">
+                <span class="color-3">PHP</span>
+                <a href="/interviews/top-50-laravel-interview-questions-and-answers-for-experienced-13.html">Laravel Interview Questions & Answers</a>
+            </li>
+            <li style="margin-top: 0px;">
+                <span class="color-4">JavaScript</span>
+                <a href="/interviews/react-js-interview-questions-answers-31.html">React.js Interview Questions & Answers</a>
+            </li>
+            <li style="margin-top: 0px;">
+                <span class="color-1">JavaScript</span>
+                <a href="/interviews/node-js-interview-questions-29.html">Node.js Interview Questions & Answers</a>
+            </li>
+            <li style="margin-top: 0px;">
+                <span class="color-1">APIs</span>
+                <a href="/interviews/restful-web-services-interview-questions-26.html">RESTful Web-Services Questions & Answers</a>
+            </li>
+        </ul>
+        <div class="next-prev-inner">
+            <a href="javascript:void(0);" id="prev-button"><i class="pe-7s-angle-left"></i></a>
+            <a href="javascript:void(0);" id="next-button"><i class="pe-7s-angle-right"></i></a>
+        </div>
+    </div>
+</div>                <div class="col-sm-12 col-md-2">
+                    <div class="top_header_icon">
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://www.facebook.com/fullstacktutorials" title="Facebook"><i class="fa fa-facebook">
+            </i></a>
+    </span>
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://twitter.com/fullstacktuts" title="Twitter"><i class="fa fa-twitter">
+            </i></a>
+    </span>
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://www.linkedin.com/company/fullstacktutorials" title="LinkedIn"><i class="fa fa-linkedin">
+            </i></a>
+    </span>
+    <span class="top_header_icon_wrap">
+        <a target="_blank" href="https://www.youtube.com/channel/UCcvYO7gu-NpA5i6-UZPc_eA" title="YouTube"><i class="fa fa-youtube">
+            </i></a>
+    </span>
+</div>                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="top_banner_wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-sm-4">
+                    <div class="header-logo">
+                        <a href="/">
+                            <img class="td-retina-data img-responsive" src="/assets/images/fullstacktutorials.png" alt="Full Stack Tutorials">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-md-8 col-sm-8 hidden-xs">
+                    <div class="header-banner">
+                        <div class="advertisement">
+                            <div class="ticker-news-box">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:15px"
+             data-ad-client="ca-pub-3810316803605653"
+             data-ad-slot="4264977729"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>                        </div>
+                        <div class="search-container">
+                            <form method="get" action="https://www.google.com/search" target="_blank">
+                                <input type="hidden" name="sitesearch" value="www.fullstacktutorials.com">
+                                <input placeholder="What are you looking for? search here..." name="q" class="form-control" type="search" autocomplete="off">
+                                <button type="submit" class="search-button"> <i class="fa fa-search"></i> <span>Search</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container hidden-xs">
+        <nav class="navbar">
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/" class="category01">Home</a>
+            </li>
+            <li>
+                <a href="/blog.html" class="category02">Articles</a>
+            </li>
+
+            <li>
+                <a href="/tutorials.html" class="category03">Tutorials</a>
+            </li>
+            <li>
+                <a href="/interviews.html" class="category04">Interviews</a>
+            </li>
+            <li>
+                <a href="/training.html" class="category05">Training</a>
+            </li>
+            <li>
+                <a href="/downloads.html" class="category06">Downloads</a>
+            </li>
+            <li>
+                <a href="/quiz.html" class="category07">Quiz</a>
+            </li>
+            <li>
+                <a href="https://www.govtvacancy.in/" class="category08" target="_blank">Govt. Jobs</a>
+            </li>
+            <li>
+                <a href="/contact.html" class="category08">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>    </div>
+</header>
+    <section class="top_ads_widgets">
+    <div class="container">
+        <div class="topads desktop-only">
+            <ins class="adsbygoogle"
+     style="display: block;"
+     data-ad-client="ca-pub-3810316803605653"
+     data-ad-slot="6053742123"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <article class="content">
+                <h1>ES6 Interview Questions </h1>
+                <div class="my-breadcrumb">
+                    <a href="/">Home</a> >>
+                    <a href="/interviews.html">Interviews</a> >>
+                    ES6 Interview Questions
+                </div>
+                <div class="social-share-items">
+                                        <div class="share-items">
+            <i class="fa fa-share-alt social-shareicon"></i>
+            <a href="javascript:void(0);" onclick="socialShare('https://www.facebook.com/sharer/sharer.php?u=https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html', 'fb');"><span class="social-icon-circle facebook"><i class="fa fa-facebook"></i></span></a>
+            <a href="https://api.whatsapp.com/send?text=ES6 Interview Questions https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html" target="_blank"><span class="social-icon-circle whatsapp"><i class="fa fa-whatsapp"></i></span></a>
+            <a href="javascript:void(0);" onclick="socialShare('https://twitter.com/intent/tweet?text=ES6 Interview Questions https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html', 'tweeter', 'width=750,height=350');"><span class="social-icon-circle twitter"><i class="fa fa-twitter"></i></span></a>
+            <a href="javascript:void(0);" onclick="socialShare('https://www.linkedin.com/shareArticle?mini=true&amp;title=ES6 Interview Questions&amp;url=https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html&amp;source=https://www.fullstacktutorials.com/', 'linkedin');"><span class="social-icon-circle linked-in"><i class="fa fa-linkedin"></i></span></a>
+        </div>
+        <div class="clearfix"></div>
+    
+                    </div>
+                <div class="date">
+                    <ul>
+                        <li>
+                            Author
+                            <a title="" href="#">
+                                <span>
+                                    Full Stack Tutorials
+                                </span>
+                            </a>
+                        </li>
+                        |
+                        <li>
+                            Last Updated -
+                            <a title="" href="#">
+                                December 03, 2019
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="intro-cls">ES6 Interview Questions: ES6 is also known as ECMAScript 2015.</div>
+<img src="/assets/images/interviews/javascript-es6-interview-questions.jpg" alt="ES6 Interview Questions" title="ES6 Interview Questions" class="img-responsive">
+
+                <div class="ques-cls">Q:- What is ES6?</div>
+<ul>
+<li>ES6 is also known as ECMAScript 2015.</li>
+<li>ES6 or ECMAScript 2015 is a 6th major release of ECMAScript.</li>
+<li>If your browser doesn't support ES6, then you can write ES6 commpatible code using <b>Babel and Webpack</b>.</li>
+<li>ES9 (ECMAScript 2018) is the latest verison of <b>ECMAScript</b>.</li>
+</ul>
+
+<div class="ques-cls">Q:- What is ECMAScript?</div>
+<p>ECMAScript is the specification defined in <b>ECMA-262</b> standard for creating a general purpose scripting language.</p>
+
+<div class="ques-cls">Q:- What is JavaScript?</div>
+<p>A general purpose scripting language that conforms to the ECMAScript specification.</p>
+
+<div class="ques-cls">Q:- What is JavaScript Engine?</div>
+<p>A program or interpreter that understands and executes JavaScript code.</p>
+<div class="sub-head-cls"> Most Popular JavaScript Engine:</div>
+<ol>
+    <li>
+        Google Chrome - <b>V8</b> // Fastest JavaScript Engine 
+    </li>
+    <li>
+        Mozilla FireFox - <b>SpiderMonkey</b>
+    </li>
+    <li>
+        Microsoft Edge - <b>Chakra</b>
+    </li>
+</ol>
+
+<div class="ques-cls">Q:- What is Babel?</div>
+<ul>
+<li>Babel is the one of the most popular javascript <abbr title="A transpiler is a type of compiler that converts code from one version to another version. for example:- from ES6 into ES5"><b>transpiler</b></abbr></li>
+<li>Babel is mainly used to convert ES6+ (ECMAScript 2015+) code into a backwards compatible version of JavaScript that can be run by older JavaScript engines.</li>
+</ul>
+
+<div class="ques-cls">Q:- What is Webpack?</div>
+<ul>
+<li>Webpack allow you to run an environment that hosts <b>Babel</b>.</li>
+<li>Webpack is an open-source <b>javascript module bundler</b> which takes modules with dependencies and generates static assets representing those modules.</li>
+</ul>
+<div class="sub-head-cls">Benefits of using Webpack:</div>
+<ol>
+<li>It bundles your multiple modules and packs it into a <b>single .js file</b>.</li>
+<li>It comes with integrated dev server. A small express app for local development.You simply include one Javascript tag pointed to the server, like <b>localhost:8080/assets/bundle.js</b>, and get live code updating and asset management for free.</li>
+</ol>
+
+<blockquote><i class="fa fa-hand-o-right"></i> You may also like -  <a href="https://www.fullstacktutorials.com/interviews/node-js-interview-questions-29.html">Node.js Interview Questions Answers</a></blockquote>
+
+<div class="ques-cls">Q:- List some new features in ES6?</div>
+<div class="sub-head-cls">New Features in ES6:</div>
+<p>Top 10 ES6 Features that every JavaScript Developer must know.</p>
+<ol>
+<li>Let and Const Keywords</li>
+<li>Arrow functions</li>
+<li>Template Literals</li>
+<li>Object Literals</li>
+<li>Default Parameters</li>
+<li>Destructuring Assignment</li>
+<li>Rest and Spread Operators</li>
+<li>Modules, Classes, Iterators, Generators in ES6</li>
+<li>Promises in ES6</li>
+<li>Support for Map/Set & WeakMap/WeakSet</li>
+</ol>
+
+
+<div class="ques-cls">1. Let and Const Keywords:</div>
+<div class="sub-head-cls">Const Keyword:</div>
+<ul>
+<li><b>const</b> keyword used to define constants in ES6.</li>
+<li>it is also known as immutable variables.</li>
+<li>The value of a constant cannot change through reassignment, and it can't be redeclared.</li>
+</ul>
+
+<pre class="code" data-language="javascript">
+const MY_CONST = "Javascript ES6 Interview Questions";
+console.log(MY_CONST); //Javascript ES6 Interview Questions
+MY_CONST = "ES6 Interview Questions";
+console.log(MY_CONST); // Uncaught TypeError: Assignment to constant variable, because we cannot re-assign a new value to a constant
+</pre>
+
+<p>In case of Object and Array we can push new items to it</p>
+<pre class="code" data-language="javascript">
+const myObject = {'name': 'Full Stack Tutorials'};
+// If you will attempt to overwrite/reassign/redeclare the object throws an error.
+
+myObject = {'name': 'Full Stack Tutorials'}; //Uncaught TypeError: Assignment to constant variable.
+myObject = {'fullname': 'Full Stack Tutorials'}; //Uncaught TypeError: Assignment to constant variable.
+
+// Since, object keys are not protected, below code will run successfully.
+myObject.name = 'Anonymous User'; // You can use Object.freeze() to make object immutable
+
+const myArray = ["Javascript", "Node.js", "React.js"];
+// It's possible to push items into the array
+myArray.push("jQuery");
+// But assigning a new Array to the same variable will throws an error.
+myArray = ["jQuery"]; //Uncaught TypeError: Assignment to constant variable.
+</pre>
+
+<div class="sub-head-cls">Object.freeze()</div>
+<blockquote>Object.freeze works on values and it makes an object immutable.</blockquote>
+<p><i>Object.freeze() takes an object as an argument and returns the same object as an immutable object</i></p>
+<p>Once you have frozen the object you cannot change, add or delete object's properties, but you can assign another instance.</p>
+<pre class="code" data-language="javascript">
+const myObject = {'name': 'Full Stack Tutorials'};
+Object.freeze(myObject);
+myObject.name = 'Anonymous User'; // will throws an error in strict mode
+console.log(myObject.name); // Output: Full Stack Tutorials
+</pre>
+
+<div class="sub-head-cls">Let Keyword:</div>
+<p>ES6 introduces the new <b>let</b> keyword that allows us to declare local variables in the scope of a block.</p>
+<p>let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.</p>
+<pre class="code" data-language="javascript">
+let a = 10;
+funtion testMe(){
+	let a = 20;
+	console.log(a); // 20
+}
+console.log(a); // 10
+</pre>
+
+<div class="ques-cls">2. Arrow Functions:</div>
+<ul>
+<li>An arrow function has a shorter syntax than a regular function.</li>
+<li>In Arrow function there is no existence of <b>this</b> keyword.</li>
+</ul>
+<pre class="code" data-language="javascript">
+(param1, param2, …, paramN) => { 
+//statements or code
+}
+</pre>
+<pre class="code" data-language="javascript">
+//in ES5
+var sum = function(a, b) {
+return a + b; 
+};
+console.log(sum(10,40)); // 50
+
+----------------------------
+//in ES6
+var total = (x, y) => {
+	return (x + y);
+}
+console.log(total(20,30)); // 50
+</pre>
+
+<blockquote><i class="fa fa-hand-o-right"></i> You may also like -  <a href="https://www.fullstacktutorials.com/interviews/advanced-javascript-interview-questions-and-answers-for-experienced-12.html">JavaScript Interview Questions </a></blockquote>
+
+
+<div class="ques-cls">3. Template literals:</div>
+<p>ES6 introduce a new and easy to use string templates with placeholders for variables.</p>
+<ul>
+<li>Template literals are enclosed by the back-tick (` `).</li>
+<li>You can use multi-line strings.</li>
+<li>You can use a new syntax ${variable_name} inside of the back-ticked string.</li>
+<li>Before ES6 it was called Template Strings.</li>
+</ul>
+<pre class="code" data-language="javascript">
+//Example-1
+
+var num1 = 10;
+var num2 = 20;
+console.log(`The sum of ${num1} and ${num2} is ${num1 + num2}.`); 
+
+//Output: The sum of 10 and 20 is 30
+
+//Example-2
+
+var TempBody = `Hello Users! Your are reading about ES6 Features,
+    In ES6, you are implementing Template Literals.
+    Let me show you the sum of ${num1} and ${num2} is ${num1 + num2}. 
+	Hope you have understood the concept of Template Literals.`;
+	
+console.log(TempBody);
+</pre>
+
+
+<div class="ques-cls">4. Object literals:</div>
+<p>A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces.</p>
+<pre class="code" data-language="javascript">
+var myObject = {
+    title: 'ES6 Interview Questions and Answers',
+    topic: 'Object Literals',
+    status: true,
+	myFunction: () => {
+		// Block of Code
+	}
+};
+</pre>
+
+<div class="ques-cls">5. Default Parameters:</div>
+<p>Default function parameters allow named parameters to be initialized with some default values if no value or undefined is passed.</p>
+<pre class="code" data-language="javascript">
+//3rd parameter has default value zero.
+
+let addNumbers = (a, b, c = 0) => {
+  return a + b + c;
+}
+
+console.log(addNumbers(1, 2, 2)); //5
+console.log(addNumbers(5, 20)); //25
+</pre>
+
+<div class="ques-cls">6. Destructuring Assignment</div>
+<p>Destructuring assignment is a special syntax that allows you to "unpack" arrays or objects into a bunch of variables, as sometimes they are more convenient.</p>
+
+<pre class="code" data-language="code">
+// we have an array with the first_name middle_name and last_name
+let arr = ["Full", "Stack", "Tutorials"]
+
+// destructuring assignment
+let [first_name, middle_name, last_name] = arr;
+
+console.log(first_name); // Full
+console.log(middle_name); // Stack
+console.log(last_name); // Tutorials
+</pre>
+
+<blockquote><i class="fa fa-hand-o-right"></i> You may also like -  <a href="https://www.fullstacktutorials.com/interviews/react-js-interview-questions-answers-31.html">React.js Interview Questions</a></blockquote>
+
+<div class="ques-cls">7. REST and Spread operator:</div>
+<p>The spread operator, or the three dots, (…) is a new operator introduced in ES6. It allows the expansion of an iterable (e.g., Array) into its constituent elements.</p>
+
+<pre class="code" data-language="javascript">
+const t = [1, 2, 3];
+
+const s = [...t, 4, 5, 6];
+
+console.log(s); // [1, 2, 3, 4, 5, 6];
+</pre>
+
+<div class="ques-cls">Example:- Remove duplicates items from an array using ES6 Set?</div>
+<blockquote>The Set object lets you store unique values of any type, whether primitive values or object </blockquote>
+<p>Here’s a one-liner to remove duplicates from an array. (ES6, of course!)</p>
+<pre class="code" data-language="javascript">
+const numbers = [1, 2, 3, 4, 5, 5, 5, 5, 5, 5];
+
+function removeDuplicates(array) {
+  return [...new Set(array)];
+}
+console.log(removeDuplicates(numbers)); // [1, 2, 3, 4, 5]
+
+</pre>
+<p><b>Set</b> was introduced in <b>ES6</b> and is similar to the Sets we encounter in Mathematics: They can’t have duplicates. After we have done that, we simply convert the Set back to an array by using the spread operator.</p>
+
+
+<div class="ques-cls">8. Class In ES6:</div>
+<pre class="code" data-language="javascript">
+class User{
+    constructor(name, age) {
+        this.name  = name;
+        this. age = age;
+    }
+   getUserDetails() {
+        console.log(this.name + " is " + this. age + " years old!");
+    }
+}
+
+var userObj = new User("Full Stack Tutorials", 5);
+console.log(userObj.getUserDetails());
+
+//Output: Full Stack Tutorials is 5 years old!
+</pre>
+
+<div class="sub-head-cls">Generators</div>
+<p>A generator is a function that can stop midway and then continue from where it stopped. In short, a generator appears to be a function but it behaves like an iterator.</p>
+<pre class="code">
+function* process() {
+    console.log('Start process 1');
+    console.log('Pause process2 until call next()');
+
+    yield;
+
+    console.log('Resumed process2');
+    console.log('Pause process3 until call next()');
+
+    yield;
+
+    console.log('Resumed process3');
+    console.log('End of the process function');
+}
+
+let _process = process();
+</pre>
+
+
+<div class="sub-head-cls">yield:</div>
+<ul>
+<li><b>yield</b> keyword simply helps to <b>pause</b> and <b>resume</b> a function in any time <b>asynchronously</b>.</li>
+<li>Additionally it helps to <b>return value</b> from a <b>generator function</b>. </li>
+</ul>
+
+<div class="sub-head-cls">Usages:</div>
+<ul>
+<li>Lazy evaluation</li>
+<li>Infinite sequences</li>
+<li>Asynchronous control flows</li>
+</ul>
+
+<div class="ques-cls">9. Promise:</div>
+<blockquote>Promises are used to handle asynchronous operations in JavaScript.</blockquote>
+<p>A promise is an object which can be returned synchronously from an asynchronous function.</p>
+<p>Promise overcome the problem of <b>callback hell</b>.</p>
+
+<div class="sub-head-cls">Promise States:</div>
+<ul>
+    <li>Fulfilled: onFulfilled() will be called (e.g. resolve() was called). </li>
+    <li>Rejected: onRejected() will be called (e.g. reject() was called).</li>
+    <li>Pending: initial state, neither fulfilled nor rejected.</li>
+</ul>
+
+<div class="sub-head-cls">Promise Consumers: then, catch, finally</div>
+
+<pre class="code" data-language="js">
+var promise = new Promise(function(resolve, reject) { 
+const A = "fullstacktutorials"; 
+const B = "fullstacktutorials"
+if(A === B) { 
+	resolve(); 
+} else { 
+	reject(); 
+} 
+}); 
+
+promise. 
+	then(function () { 
+		console.log('Success, Your promise has been resolved successfully'); 
+	}). 
+	catch(function () { 
+		console.log('Something went wrong!'); 
+	}); 
+</pre>
+
+<div class="ques-cls">10. Map:</div>
+<p>The Map object is a simple key/value map.</p> 
+<p>Any value (both objects and primitive values) may be used as either a key or a value. Syntax [key, value].</p>
+<pre class="code" data-language="javascript">
+hash = new Map()
+hash.set("FullStackTutorials", "Learn Full Stack Tutorials free Online, Javascript ES6 Interview Questions")
+hash.set(1, 200);
+
+console.log(hash); 
+//Output: Map(2) {"FullStackTutorials" => "Learn Full Stack Tutorials free Online, Javascript ES6 Interview Questions", 1 => 200}
+</pre>
+
+<div class="ques-cls">Q:- Difference between Arrow Function and Normal Function in JavaScript?</div>
+<p>There are following differences between Arrow Function and Normal (Regular) Function:</p>
+<div class="sub-head-cls">1. Syntax:</div>
+<p>Both Arrow Function and Normal (Regular) Function has different syntax.</p>
+<pre class="code">
+//Normal Function:
+
+let func = function myFunc(params){ 
+  // body of the function 
+}; 
+
+OR
+
+function myFunc(params){ 
+  // body of the function 
+}; 
+</pre>
+
+
+<pre class="code">
+//Arrow Function:
+
+let func = (params) => { 
+  // body of the function 
+}; 
+</pre>
+
+
+<div class="sub-head-cls">2. Use of this keyword:</div>
+<blockquote>In Arrow functions there are no binding of this</blockquote>
+<p>Unlike regular functions, arrow functions do not have their own <b>this</b>.</p>
+<pre class="code">
+let myFunc = { 
+	name: "Full Stack Tutorials", 
+	arrowFunc:() => { 
+		console.log(`Welcome to, ${this.name}`); // no 'this' binding 
+	}, 
+	regFunc(){	 
+		console.log(`Welcome to, ${this.name}`); // 'this' binding works 
+	} 
+}; 
+myFunc.arrowFunc(); 
+myFunc.regFunc(); 
+</pre>
+
+
+<div class="sub-head-cls">3. Using new keyword:</div>
+<p>Arrow functions cannot be used as constructor with <b>new</b>, it will throw error.</p>
+<pre class="code">
+let myFunc = () => {};
+let func = new myFunc(); // Uncaught TypeError: myFunc is not a constructor
+</div>
+
+
+<div class="sub-head-cls">4. Availability of arguments objects:</div>
+<p>Arrow functions don't have their own <b>arguments object</b>. Therefore, arguments is simply a reference to the arguments of the enclosing scope.</p>
+
+<div class="sub-head-cls">5. Use of prototype property:</div>
+<p>Arrow functions do not have a <b>prototype</b> property.</p>
+<pre class="code">
+let myFunc = () => {};
+console.log(myFunc.prototype); // undefined
+</pre>
+
+
+<div class="ques-cls">Q:- How would you filter an Array of Objects in ES6? </div>
+<pre class="code" data-language="javascript">
+var testArray = [{"name":"Jai",  "age": 26},
+              {"name":"Shiv",  "age": 22},
+              {"name":"Anuj", "age": 5 },
+              {"name":"Jenny", "age": 20 }];
+var data = testArray.filter(person => person.age > 18); //Filters the Array of Objects to condition set
+console.log(data);
+/*
+0:{name: "Jai", age: 26}
+1:{name: "Shiv", age: 22}
+2:{name: "Jenny", age: 20}
+length:3
+*/
+</pre>
+                <div class="social-share-items text-center">
+                                        <h3><i class="fa fa-hand-o-right" aria-hidden="true"></i> Was this interview questions answers helpful?</h3>
+        <p>Share now with your friends!</p>
+        <div class="share-items">
+            <i class="fa fa-share-alt social-shareicon"></i>
+            <a href="javascript:void(0);" onclick="socialShare('https://www.facebook.com/sharer/sharer.php?u=https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html', 'fb');"><span class="social-icon-circle facebook"><i class="fa fa-facebook"></i></span></a>
+            <a href="https://api.whatsapp.com/send?text=ES6 Interview Questions https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html" target="_blank"><span class="social-icon-circle whatsapp"><i class="fa fa-whatsapp"></i></span></a>
+            <a href="javascript:void(0);" onclick="socialShare('https://twitter.com/intent/tweet?text=ES6 Interview Questions https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html', 'tweeter', 'width=750,height=350');"><span class="social-icon-circle twitter"><i class="fa fa-twitter"></i></span></a>
+            <a href="javascript:void(0);" onclick="socialShare('https://www.linkedin.com/shareArticle?mini=true&amp;title=ES6 Interview Questions&amp;url=https://www.fullstacktutorials.com/interviews/javascript-es6-interview-questions-11.html&amp;source=https://www.fullstacktutorials.com/', 'linkedin');"><span class="social-icon-circle linked-in"><i class="fa fa-linkedin"></i></span></a>
+        </div>
+        <div class="clearfix"></div>
+    
+                    </div>
+                <div class="tags">
+    <ul>
+        <li>
+            <a href="/interviews/javascript.html">Javascript</a>
+        </li>
+        <li>
+            <a href="/interviews.html">Interviews</a>
+        </li>
+        <li>
+            <a href="/tutorials.html">Tutorials</a>
+        </li>
+        <li>
+            <a href="/interviews/php.html">PHP</a>
+        </li>
+        <li>
+            <a href="/interviews/java.html">Java</a>
+        </li>
+        <li>
+            <a href="/interviews/python.html">Python</a>
+        </li>
+        <li>
+            <a href="/blog.html">Blog</a>
+        </li>
+    </ul>
+</div>            </article>
+        </div>
+
+        <div class="col-sm-4 left-padding">
+            <aside class="sidebar">
+                                <h3 class="category-heading ">
+    Follow us
+</h3>
+<div class="headding-border">
+</div>
+<div class="social">
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/fullstacktutorials" target="_blank" class="facebook"><i class="fa  fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/fullstacktuts" target="_blank" class="twitter"><i class="fa  fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/company/fullstacktutorials" target="_blank" class="linkedin"><i class="fa  fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/channel/UCcvYO7gu-NpA5i6-UZPc_eA" target="_blank" class="youtube"><i class="fa fa-youtube"></i>
+            </a>
+        </li>
+    </ul>
+</div>                                <div class="ads">
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-3810316803605653"
+     data-ad-slot="2516252529"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>            </aside>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="category-headding ">Popular Interview Questions</h3>
+            <div class="headding-border"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="items-carousel" class="owl-carousel owl-theme">
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/core-php-interview-questions-and-answers-36.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/php-interview-questions.png" alt="Core PHP Interview Questions and Answers" title="Core PHP Interview Questions and Answers" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/php.html" class="post-badge btn_txt">Php</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/core-php-interview-questions-and-answers-36.html">
+                                    Core PHP Interview Questions and Answers
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/flutter-interview-questions-35.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/flutter-interview-questions.png" alt="Flutter Interview Questions" title="Flutter Interview Questions" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/flutter.html" class="post-badge btn_txt">Flutter</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/flutter-interview-questions-35.html">
+                                    Flutter Interview Questions
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/redux-interview-questions-and-answers-33.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/redux-interview-questions.png" alt="Redux Interview Questions and Answers" title="Redux Interview Questions and Answers" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/javascript.html" class="post-badge btn_txt">Javascript</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/redux-interview-questions-and-answers-33.html">
+                                    Redux Interview Questions and Answers
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/react-js-interview-questions-answers-31.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/react-js-interview-questions.png" alt="React.js Interview Questions and Answers" title="React.js Interview Questions and Answers" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/javascript.html" class="post-badge btn_txt">Javascript</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/react-js-interview-questions-answers-31.html">
+                                    React.js Interview Questions and Answers
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/node-js-interview-questions-29.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/node-js-interview-questions.png" alt="Node.js Interview Questions Answers" title="Node.js Interview Questions Answers" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/javascript.html" class="post-badge btn_txt">Javascript</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/node-js-interview-questions-29.html">
+                                    Node.js Interview Questions Answers
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/python-interview-questions-25.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/python-interview-questions.png" alt="Python Interview Questions and Answers" title="Python Interview Questions and Answers" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/python.html" class="post-badge btn_txt">Python</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/python-interview-questions-25.html">
+                                    Python Interview Questions and Answers
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/redis-cache-interview-questions-19.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/redis-interview-questions.png" alt="Redis Cache Interview Questions" title="Redis Cache Interview Questions" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/redis.html" class="post-badge btn_txt">Redis</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/redis-cache-interview-questions-19.html">
+                                    Redis Cache Interview Questions
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/mongodb-interview-questions-17.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/mongodb-interview-questions.png" alt="MongoDB Interview Questions" title="MongoDB Interview Questions" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/database.html" class="post-badge btn_txt">Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/mongodb-interview-questions-17.html">
+                                    MongoDB Interview Questions
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/top-50-laravel-interview-questions-and-answers-for-experienced-13.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/laravel-interview-questions.png" alt="Top 50 Laravel Interview Questions" title="Top 50 Laravel Interview Questions" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/php.html" class="post-badge btn_txt">Php</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/top-50-laravel-interview-questions-and-answers-for-experienced-13.html">
+                                    Top 50 Laravel Interview Questions
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="item">
+                <div class="row rn_block">
+                    <div class="col-xs-12 col-md-12 col-sm-12 padd">
+                        <div class="post-wrapper wow fadeIn">
+                            <div class="post-thumb">
+                                <a href="/interviews/advanced-javascript-interview-questions-and-answers-for-experienced-12.html">
+                                                                        <img class="img-responsive" src="/assets/images/interviews/javascript-interview-questions.png" alt="JavaScript Interview Questions" title="JavaScript Interview Questions" />
+                                                                    </a>
+                            </div>
+                            <div class="post-info meta-info-rn">
+                                <div class="slide">
+                                    <a target="_blank" href="/interviews/javascript.html" class="post-badge btn_txt">Javascript</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-title-author-details">
+                            <h4>
+                                <a href="/interviews/advanced-javascript-interview-questions-and-answers-for-experienced-12.html">
+                                    JavaScript Interview Questions
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="footer-box">
+                    <h3 class="category-heading">
+                        Tech-Interviews
+                    </h3>
+                    <div class="headding-border">
+                    </div>
+                    <a class="tag" href="/interviews/javascript.html" title="JavaScript">JavaScript</a>
+                    <a class="tag" href="/interviews/php.html" title="PHP">PHP</a>
+                    <a class="tag" href="/interviews/python.html" title="Python">Python</a>
+                    <a class="tag" href="/interviews/java.html" title="Java">Java</a>
+                    <a class="tag" href="/interviews/database.html" title="Database">Database</a>
+                    <a class="tag" href="/interviews/firebase.html" title="FIREBASE">Firebase</a>
+                    <a class="tag" href="/interviews/web.html" title="Java">Web</a>
+                    <a class="tag" href="/interviews/api.html" title="PHP">APIs</a>
+                    <a class="tag" href="/interviews/server.html" title="SERVER">SERVER</a>
+                    <a class="tag" href="/interviews/softskills.html" title="Softskills">Softskills</a>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="footer-box">
+                    <h3 class="category-heading ">
+                        Newsletter
+                    </h3>
+                    <div class="headding-border bg-color-2">
+                    </div>
+                    <div class="newsletter-inner">
+                        <p>
+                            Enter your email address!
+                        </p>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required="true">
+                        <button type="button" class="btn btn-style">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="footer-box">
+                    <h3 class="category-heading">
+                        Popular Interviews
+                    </h3>
+                    <div class="headding-border bg-color-3">
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-dot-circle-o"></i>
+                            <a href="/interviews/advanced-javascript-interview-questions-and-answers-for-experienced-12.html">JavaScript Interview Questions Answers</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i>
+                            <a href="/interviews/react-js-interview-questions-answers-31.html">React.js Interview Questions Answers</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i>
+                            <a href="/interviews/node-js-interview-questions-29.html">Node.js Interview Questions Answers</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i>
+                            <a href="/interviews/core-php-interview-questions-and-answers-36.html">PHP Interview Questions Answers</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i>
+                            <a href="/interviews/top-50-laravel-interview-questions-and-answers-for-experienced-13.html">Laravel Interview Questions Answers</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="footer-box footer-logo-address">
+                    <h3 class="category-heading ">About us</h3>
+                    <div class="headding-border"></div>
+                    <address>
+                        Full Stack Tutorials provides Interview Questions and free Online Tutorials on JavaScript, Node.js, React.js, Python, PHP, Laravel, MongoDB, MySQL, Java, AWS, and MicroServices for beginners and IT professionals.
+                        <a href="/about.html">...read more</a>
+                    </address>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="footer-box">
+                            <h3 class="category-heading ">Useful Links</h3>
+                            <div class="headding-border bg-color-2"></div>
+                            <ul>
+                                <li><i class="fa fa-dot-circle-o"></i><a href="/tutorials.html">Online Tutorials</a></li>
+                                <li><i class="fa fa-dot-circle-o"></i><a href="/interviews.html">Interview QnA</a></li>
+                                <li><i class="fa fa-dot-circle-o"></i><a href="/contact.html">Hire us</a></li>
+                                <li><i class="fa fa-dot-circle-o"></i><a href="/privacy-policy.html">Privacy Policy</a></li>
+                                <li><i class="fa fa-dot-circle-o"></i><a href="https://www.govtvacancy.in/" target="_blank">Govt. Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="footer-box">
+                            <h3 class="category-heading">
+                                Tutorials
+                            </h3>
+                            <div class="headding-border bg-color-3">
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/tutorials/reactjs/reactjs-tutorial.html">React.js Tutorial</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/tutorials/nodejs/nodejs-tutorial.html">Node.js Tutorial</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="#">Python Tutorial</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="#">PHP Tutorial</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="#">HTML Tutorial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer-box">
+                            <h3 class="category-heading">
+                                Help & Support
+                            </h3>
+                            <div class="headding-border bg-color-4">
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/contact.html">Contact us</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/contact.html">Feedback</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/advertise.html">Advertise online</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/services.html">Our Services</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-dot-circle-o">
+                                    </i>
+                                    <a href="/contact.html">Ask Question?</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<div class="sub-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>Copyright ©2019 <a href="https://www.fullstacktutorials.com">fullstacktutorials.com</a>. all rights reserved | powered by - <a href="https://www.fullstacktutorials.com/" class="color-1">Full Stack Tutorials</a> </p>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/fullstacktutorials" class="facebook"><i class="fa  fa-facebook">
+                                </i> </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/fullstacktuts" class="twitter"><i class="fa  fa-twitter">
+                                </i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/fullstacktutorials" class="linkedin"><i class="fa  fa-linkedin">
+                                </i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCcvYO7gu-NpA5i6-UZPc_eA" class="youtube"><i class="fa fa-youtube">
+                                </i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/assets/js/bootstrap.min.js?v=2"></script>
+<script defer type="text/javascript" src="/assets/js/scripts.js?v=2"></script>
+<script defer type="text/javascript" src="/assets/js/custom.js?v=2"></script>
+
+<div id="toTop" class="btn btn-info">
+    <span class="fa fa-dot-circle-o top"></span>
+    <br>
+    TOP
+</div>
+
+<script defer src="/assets/js/jquery.highlight.js?v=2"></script>
+<script>
+    $(document).ready(function() {
+        $('pre.code').highlight({
+            // show source code tab
+            source: true,
+            // show zebra
+            zebra: true,
+            //indents: "tabs" or "space"  
+            indent: 'tabs',
+            //ordered or unordered list
+            list: 'ol',
+            //name of the tag attribute to add a special language highlighting
+            attribute: 'lang'
+        });
+    });
+</script></body>
+
+</html>

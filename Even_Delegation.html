@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+
+
+
+  </head>
+  <body>
+  <h1> Question #1: Event delegation </h1>
+Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent. 
+
+  <p> Let's say that we have a parent UL element with several child elements:</p>
+      <script>
+  // Get the element, add a click listener...
+document.getElementById('parent-list').addEventListener('click', function(e) {
+	// e.target is the clicked element!
+	// If it was a list item
+	if(e.target && e.target.nodeName == 'LI') {
+		// List item found!  Output the ID!
+		console.log('Item ', e.target.id.replace('post-', ""), " was clicked!");
+	}
+});
+    </script>
+  <ul id='parent-list'>
+	<li id="post-1"><a href="">Item 1</a></li>
+	<li id="post-2"><a href="">Item 2</a></li>
+	<li id="post-3"><a href="">Item 3</a></li>
+	<li id="post-4"><a href="">Item 4</a></li>
+	<li id="post-5"><a href="">Item 5</a></li>
+	<li id="post-6"><a href="">Item 6</a></li>
+</ul>
+<p> Let's also say that something needs to happen when each child element is clicked.  You could add a separate event listener to each individual LI element, but what if LI elements are frequently added and removed from the list?  Adding and removing event listeners would be a nightmare, especially if addition and removal code is in different places within your app.  The better solution is to add an event listener to the parent UL element.  But if you add the event listener to the parent, how will you know which element was clicked?<br /><br />
+
+Simple:  when the event bubbles up to the UL element, you check the event object's target property to gain a reference to the actual clicked node.  Here's a very basic JavaScript snippet which illustrates event delegation:</p>
+
+  </body>
+</html>
+

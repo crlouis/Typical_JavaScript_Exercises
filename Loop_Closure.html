@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+<script src="https://cdn.rawgit.com/zloirock/core-js/master/client/shim.min.js"></script>
+<script src="https://wzrd.in/standalone/tape@latest"></script>
+  <script src="https://wzrd.in/standalone/tap-browser-color@latest"></script>
+<script src="//fb.me/react-with-addons-0.14.3.js"></script>
+<script src="//fb.me/react-dom-0.14.3.js"></script>
+
+
+  </head>
+  <body>
+  <h1> Question #2: Using a closure within a loop</h1>
+<p>In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.</p>
+
+<h1>Be prepared for a quick follow-up: “Can you name two common uses for closures?”</h1>
+
+<p>To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function.
+The inner function will have access to the variables in the outer function scope, even after the outer function has returned.</p>
+
+<p>Among other things, closures are commonly used to give objects data privacy. Data privacy is an essential property that helps us program to an interface, not an implementation. This is an important concept that helps us build more robust software because implementation details are more likely to change in breaking ways than interface contracts.</p>
+
+  <script>
+var dwightSalary = (function() {
+    var salary = 60000;
+    function changeBy(amount) {
+        salary += amount;
+    }
+    return {
+        raise: function() {
+            changeBy(5000);
+        },
+        lower: function() {
+            changeBy(-5000);
+        },
+        currentAmount: function() {
+            return salary;
+        }
+    }; 
+})();
+
+alert(dwightSalary.currentAmount()); // $60,000
+dwightSalary.raise();
+alert(dwightSalary.currentAmount()); // $65,000
+dwightSalary.lower();
+dwightSalary.lower();
+alert(dwightSalary.currentAmount()); // $55,000
+
+dwightSalary.changeBy(10000) // TypeError: undefined is not a function
+  </script>
+
+
+
+  </body>
+</html>
+
